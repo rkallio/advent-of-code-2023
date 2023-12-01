@@ -44,7 +44,7 @@ Palauta kalibrointikoodi.  Jos PRINT, tulosta koodi."
   (interactive "p")
   (let ((sum 0)
         (calibration-codes
-         (mapcar #' advent-of-code--1-digits-on-line
+         (mapcar #'advent-of-code--1-digits-on-line
                     (string-split advent-of-code--1-input))))
     (dolist (code calibration-codes)
       (setq sum (+ (* 10 (car code)) (cdr code) sum)))
