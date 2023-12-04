@@ -30,8 +30,7 @@
       (let ((intersections (length (cl-intersection .winning-numbers .my-numbers))))
         (dotimes (j intersections)
           (let ((target (nth (1+ (+ i j)) games)))
-            (setcdr (assq 'copies target) (+ .copies (alist-get 'copies target)))
-            )))))
+            (setcdr (assq 'copies target) (+ .copies (alist-get 'copies target))))))))
   (apply #'+ (mapcar (apply-partially #'alist-get 'copies) games)))
 #+end_src
 
